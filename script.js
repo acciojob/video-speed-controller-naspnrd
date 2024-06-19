@@ -38,11 +38,9 @@ function skipVideo(event) {
   video.currentTime += skipDuration;
 }
 
-video.addEventListener('loadedmetadata', () => {
-  video.addEventListener('timeupdate', updateProgress);
-  volumeInput.addEventListener('input', setVolume);
-  playbackSpeedInput.addEventListener('input', setPlaybackSpeed);
-  toggle.addEventListener('click', togglePlayPause);
-  rewindButton.addEventListener('click', skipVideo);
-  forwardButton.addEventListener('click', skipVideo);
-});
+video.addEventListener('timeupdate', updateProgress);
+volumeInput.addEventListener('input', setVolume);
+playbackSpeedInput.addEventListener('input', setPlaybackSpeed);
+toggle.addEventListener('click', togglePlayPause);
+rewindButton.addEventListener('click', skipVideo);
+forwardButton.addEventListener('click', skipVideo);
